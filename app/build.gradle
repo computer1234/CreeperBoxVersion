@@ -1,0 +1,92 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'helper.creeperbox'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "helper.creeperbox"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk{
+            //noinspection ChromeOsAbiSupport
+            abiFilters 'arm64-v8a'
+        }
+    }
+
+    buildTypes {
+        debug {
+            initWith debug
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    externalNativeBuild {
+        cmake {
+            path file('src/main/cpp/CMakeLists.txt')
+            version '3.22.1'
+        }
+    }
+
+    buildFeatures {
+        viewBinding true
+        prefab true
+    }
+
+    packagingOptions {
+        pickFirst '**/libshadowhook.so'
+    }
+}
+
+android {
+    configurations {
+        all {
+            resolutionStrategy {
+                // exclude duplicate classes
+                exclude group: 'com.google.guava', module: 'listenablefuture'
+                exclude group: 'com.google.errorprone', module: 'error_prone_annotations'
+            }
+        }
+    }
+    ndkVersion '27.0.12077973'
+    buildToolsVersion '34.0.0'
+    viewBinding {
+        enabled true
+    }
+    dependenciesInfo {
+        includeInApk true
+        includeInBundle true
+    }
+    packagingOptions {
+        excludes += '/META-INF/**'
+        excludes += '/kotlin/**'
+        excludes += '/DebugProbesKt.bin'
+        excludes += '/kotlin-tooling-metadata.json'
+    }
+}
+
+
+dependencies {
+    implementation "org.msgpack:msgpack-core:0.9.8"
+    implementation("io.netty:netty-all:4.1.109.Final")
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    compileOnly fileTree(dir: 'libs/compile_only', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
+}

@@ -1,0 +1,32 @@
+
+> Configure project :app
+WARNING: The option setting 'android.overridePathCheck=true' is experimental.
+The current default is 'false'.
+WARNING: The option setting 'android.prefabVersion=2.0.0' is experimental.
+
+> Task :app:externalNativeBuildCleanDebug
+Clean creeperbox-arm64-v8a
+
+> Task :app:externalNativeBuildCleanRelease
+Clean creeperbox-arm64-v8a
+
+> Task :app:clean FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:clean'.
+> java.io.IOException: Unable to delete directory 'C:\Users\1\Desktop\Android\CreeperBoxVersion\app\build'
+    Failed to delete some children. This might happen because a process has files open or has its working directory set in the target directory.
+    - C:\Users\1\Desktop\Android\CreeperBoxVersion\app\build\outputs\apk\debug
+    - C:\Users\1\Desktop\Android\CreeperBoxVersion\app\build\outputs\apk
+    - C:\Users\1\Desktop\Android\CreeperBoxVersion\app\build\outputs
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 3s
+3 actionable tasks: 3 executed

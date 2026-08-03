@@ -1,0 +1,98 @@
+LocalPlayer_normalTick E8 0F 19 FC FD 7B 01 A9 FD 43 00 91 FC 6F 02 A9 FA 67 03 A9 F8 5F 04 A9 F6 57 05 A9 F4 4F 06 A9 FF 03 10 D1 59 D0 3B D5
+
+//Player_normalTick FF 03 06 D1 FD 7B 13 A9 FD C3 04 91 FC A3 00 F9 F8 5F 15 A9 F6 57 16 A9 F4 4F 17 A9 57 D0 3B D5 F3 03 00 AA E8 16 40 F9
+
+ClientInstance_tick Brightness Texture Update  FF 83 02 D1 E8 33 00 FD FD 7B 07 A9 FD C3 01 91 F6 57 08 A9 F4 4F 09 A9 56 D0 3B D5 F3 03 01 AA
+
+NetworkSystem_sendInternal  FF 43 02 D1 FD 7B 03 A9 FD C3 00 91 FB 23 00 F9 FA 67 05 A9 F8 5F 06 A9 F6 57 07 A9 F4 4F 08 A9 5A D0 3B D5 F3 03 03 AA
+
+NetworkConnection_receivePacket E8 07 00 F9 08 15 40 F9 29 A1 00 91 找开头
+
+FlagReceiveSide NetworkSystem::runEvents task FF 43 06 D1 FD 7B 13 A9 FD C3 04 91 FC A3 00 F9 FA 67 15 A9 F8 5F 16 A9 F6 57 17 A9 F4 4F 18 A9 59 D0 3B D5 F5 03 01 2A
+
+60 00 00 37 68 82 41 39 找开头
+
+//ScreenView_setupAndRender E8 0F 19 FC FD 7B 01 A9 FD 43 00 91 FC 6F 02 A9 FA 67 03 A9 F8 5F 04 A9 F6 57 05 A9 F4 4F 06 A9 FF 03 07 D1 E1 17 00 F9
+
+LevelRenderer_renderLevel FD 7B BC A9 FC 5F 01 A9 FD 03 00 91 F6 57 02 A9 F4 4F 03 A9 FF 43 0B D1 57 D0 3B D5
+
+HandleNoSlow ZN25ItemUseSlowdownSystemImpl20applyItemUseSlowd 搜index 3
+
+GameMode_getDestroyRate E8 0F 1D FC FD FB 00 A9 FD 23 00 91 F5 0F 00 F9 F4 4F 02 A9 F3 03 00 AA 00 04 40 F9
+
+LevelRendererPlayer_bobHurt FF C3 02 D1 EA 33 00 FD E9 23 07 6D FD 7B 08 A9 FD 03 02 91 F6 57 09 A9 F4 4F 0A A9 55 D0 3B D5
+
+ItemRenderer_render FF 03 03 D1 E8 2B 00 FD FD 7B 06 A9 FD 83 01 91 FC 6F 07 A9 FA 67 08 A9 F8 5F 09 A9 F6 57 0A A9 F4 4F 0B A9 5C D0 3B D5 F5 03 00 AA
+
+ItemInHandRenderer_renderItem EE 0F 16 FC ED 33 01 6D EB 2B 02 6D E9 23 03 6D FD 7B 04 A9 FD 03 01 91 FC 6F 05 A9 FA 67 06 A9 F8 5F 07 A9 F6 57 08 A9 F4 4F 09 A9 FF 03 0A D1
+
+ParseJson FD 7B BC A9 F8 5F 01 A9 FD 03 00 91 F6 57 02 A9 F4 4F 03 A9 2A A4 40 A9 F3 03 02 AA F4 03 00 AA
+
+CrcCheck O0O01006lIIl
+
+doNoWeb 68 02 40 F9 01 EB 83 52 21 C1 BE 72 17 A1 00 91 E0 03 17 AA ?? ?? ?? ?? E1 BE 9C 52 找开头
+
+doGroundAndAirMoveSystem 0x7E3B844 moveRelative 00 08 21 1E A0 1E 00 BD 找开头
+
+OnReach 68A1284
+
+GameMode_getPickRange E8 0F 1E FC FD 7B 01 A9 FD 43 00 91 00 04 40 F9
+
+setupCamera 67 28 23 1E 第一个找开头
+
+getGameType 1F 90 01 71 E1 找调用 == 0x64
+
+ShouldDisplayPlayerPosition FD 7B 02 A9 FD 83 00 91 F5 1B 00 F9 F4 4F 04 A9 55 D0 3B D5 F3 03 00 AA A8 16 40 F9 A8 83 1F F8 ?? ?? ?? 95 60 找开头
+
+AddChatMessage FF C3 07 D1 FD 7B 1A A9 FD 83 06 91 FC DB 00 F9 F8 5F 1C A9 F6 57 1D A9 F4 4F 1E A9 57 D0 3B D5 E8 16 40 F9
+
+PlayWorld PYTHON_CALL_NATIVE 找引用
+
+decryptHttpContent FF 03 06 D1 FD 7B 12 A9 FD 83 04 91 FC 9B 00 F9 FA 67 14 A9 F8 5F 15 A9 F6 57 16 A9 F4 4F 17 A9 57 D0 3B D5 F3 03 08 AA E9 16 40 F9 A8 83 01 D1
+
+BlockTessellator_tessellateInWorld FF C3 01 D1 FD 7B 02 A9 FD 83 00 91 F9 1B 00 F9 F8 5F 04 A9 F6 57 05 A9 F4 4F 06 A9 58 D0 3B D5 F7 03 04 2A
+
+BlockActorRenderDispatcher_render FF 03 06 D1 FD 7B 12 A9 FD 83 04 91 FC 6F 13 A9 FA 67 14 A9 F8 5F 15 A9 F6 57 16 A9 F4 4F 17 A9 53 D0 3B D5 F4
+
+RenderChunkBuilder_sortBlocks E1 03 15 2A 62 01 80 52 找开头
+
+Options_getGamma FD 7B BF A9 FD 03 00 91 08 F3 82 52 09 00 40 F9 0A 68 68 38 28 39 40 F9 CA 00 00 34 A1 24 80 52
+
+HttpRequest_HttpRequest FD 7B BD A9 F6 57 01 A9 FD 03 00 91 F4 4F 02 A9 F5 03 01 AA F3 03 00 AA ?? ?? ?? ?? F4 03 13 AA 00
+
+FxxkACSDK acsdk.gameyw.netease.com
+
+Actor_getNameTag 00 20 06 91 81 00 80 52 ?? ?? ?? ?? FD
+
+
+ActorHeadRotationComponent 21428E52C157B77200
+MobBodyRotationComponent 41778952C1FEBA7200
+ActorGameTypeComponent E1BB9D52611AB17200
+MaxAutoStepComponent E1AF8B52C155B37200
+AbilitiesComponent 01A98B52E116AD7200
+MoveInputComponent E11083526131A07200
+ActorDefinitionIdentifierComponent E1698A52C1D6BB72
+RuntimeIDComponent A1769752A181BF7200
+ActorUniqueIDComponent E1F58A52211FA37200
+BlockMovementSlowdownMultiplierComponent 01EB835221C1BE7200
+FallDistanceComponent C19E865261CDB97200
+MobEffectComponent 01AA965221D4BC7200
+ActorTypeComponent 2183945261EDA97200
+MobJumpComponent
+
+
+ActorHeadRotationComponent
+MobBodyRotationComponent
+ActorGameTypeComponent
+MaxAutoStepComponent
+AbilitiesComponent
+MoveInputComponent
+ActorDefinitionIdentifierComponent
+RuntimeIDComponent
+ActorUniqueIDComponent
+BlockMovementSlowdownMultiplierComponent
+FallDistanceComponent
+MobEffectComponent
+ActorTypeComponent
+MobJumpComponent
+

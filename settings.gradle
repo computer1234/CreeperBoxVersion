@@ -1,0 +1,22 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        maven { url = "https://mccheatz.github.io/maven_repo/" }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url = 'https://repo.opencollab.dev/maven-releases/' }
+        maven { url = 'https://repo.opencollab.dev/maven-snapshots/' }
+        maven { url = 'https://mccheatz.github.io/maven_repo/' }
+    }
+}
+
+rootProject.name = "CreeperBox"
+include ':app'
+
